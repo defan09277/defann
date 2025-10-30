@@ -3,96 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kartu Ujian Peserta</title>
+    <title>Tombol Perkenalan Diri</title>
     <style>
-        /* Gaya CSS untuk tampilan kartu */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .kartu-ujian {
-            width: 100%;
-            max-width: 600px;
-            border: 2px solid #333;
-            padding: 20px;
-            background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .header {
             text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-        }
-
-        .header h1 {
-            margin: 0;
-            font-size: 1.5em;
-            color: #1a5a8f; /* Warna biru institusi */
-        }
-
-        .header p {
-            margin: 5px 0 0 0;
-            font-size: 0.9em;
-            color: #555;
-        }
-
-        .detail-peserta table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 20px;
-        }
-
-        .detail-peserta table td {
-            padding: 8px 0;
-            vertical-align: top;
-            font-size: 0.9em;
-        }
-
-        .detail-peserta .label {
-            font-weight: bold;
-            width: 35%;
-        }
-
-        .detail-ujian {
-            border: 1px solid #ccc;
-            padding: 15px;
-            background-color: #f9f9f9;
-            border-radius: 4px;
+            padding: 50px;
+            background-color: #e6f7ff; /* Latar belakang cerah */
         }
         
-        .detail-ujian p {
-            margin: 5px 0;
-            font-size: 0.9em;
-        }
-        
-        .catatan {
-            margin-top: 20px;
-            padding: 10px;
-            border: 1px dashed #cc0000;
-            background-color: #fff5f5;
-            font-size: 0.8em;
-            color: #cc0000;
+        /* Gaya untuk tombol */
+        .tombol-perkenalan {
+            background-color: #007bff; /* Warna biru */
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .tanda-tangan {
-            margin-top: 30px;
-            text-align: right;
-            font-size: 0.9em;
+        .tombol-perkenalan:hover {
+            background-color: #0056b3; /* Warna lebih gelap saat disentuh */
         }
     </style>
 </head>
 <body>
 
-    <div class="kartu-ujian">
-        
-        <div class="header">
-            <h1>KARTU PESERTA UJIAN</h1>
-            <p>SELEKSI PENERIMAAN MAHASISWA BARU (SPMB) T
+    <h1>Tekan Tombol di Bawah Ini</h1>
+
+    <button class="tombol-perkenalan" onclick="perkenalkanDiri()">
+        👋 Klik untuk Kenalan!
+    </button>
+
+    <script>
+        // Fungsi JavaScript yang akan menampilkan pesan perkenalan
+        function perkenalkanDiri() {
+            // GANTI detail di bawah ini dengan informasi Anda
+            const nama = "Budi Santoso";
+            const usia = "25 tahun";
+            const pekerjaan = "Pengembang Web (Web Developer)";
+            const hobi = "bermain gitar dan mendaki gunung";
+            
+            const pesan = `Halo! Nama saya ${nama}. Usia saya ${usia} dan saat ini saya bekerja sebagai ${pekerjaan}. Di waktu luang, saya suka ${hobi}. Senang berkenalan dengan Anda!`;
+
+            // Menampilkan pesan perkenalan melalui jendela pop-up (alert)
+            alert(pesan);
+        }
+    </script>
+
+</body>
+</html>
